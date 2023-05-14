@@ -200,26 +200,9 @@ public class DatosInvestigadores {
 		return investigadores.get(i).capacidad();
 	}
 
-//	public static void main(String[] args) {
-//		System.out.println("DATOS DE ENTRADA 1:");
-//
-//		iniDatos("ficheros/Ejercicio3DatosEntrada1.txt");
-//
-//		System.out.println("___________________________");
-//		System.out.println("DATOS DE ENTRADA 2:");
-//
-//		iniDatos("ficheros/Ejercicio3DatosEntrada2.txt");
-//
-//		System.out.println("___________________________");
-//		System.out.println("DATOS DE ENTRADA 3:");
-//
-//		iniDatos("ficheros/Ejercicio3DatosEntrada3.txt");
-//	}
 	public static void main(String[] args) {
 		for (int i = 0; i < 3; i++) {
 			iniDatos("ficheros/Ejercicio3DatosEntrada" + String.valueOf(i + 1) + ".txt");
 		}
 	}
-//}
-
 }

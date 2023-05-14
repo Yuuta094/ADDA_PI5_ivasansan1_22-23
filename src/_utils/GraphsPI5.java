@@ -8,6 +8,9 @@ import ejercicio1.CafesHeuristic;
 import ejercicio2.CursoEdge;
 import ejercicio2.CursoVertex;
 import ejercicio2.CursosHeuristic;
+import ejercicio3.InvestigadoresEdge;
+import ejercicio3.InvestigadoresHeuristic;
+import ejercicio3.InvestigadoresVertex;
 import ejercicio4.ClientesEdge;
 import ejercicio4.ClientesHeuristic;
 import ejercicio4.ClientesVertex;
@@ -31,6 +34,13 @@ public class GraphsPI5 {
 			return EGraph.virtual(v_inicial, es_terminal, PathType.Sum, Type.Min)
 					.goalHasSolution(CursoVertex.goalHasSolution())
 					.heuristic(CursosHeuristic::heuristic);
+		}
+		
+	// Ejercicio3: Builder
+	public static EGraphBuilder<InvestigadoresVertex, InvestigadoresEdge> investigadoresBuilder(InvestigadoresVertex v_inicial, Predicate<InvestigadoresVertex> es_terminal) { 
+		return EGraph.virtual(v_inicial, es_terminal, PathType.Sum, Type.Min)
+				.goalHasSolution(InvestigadoresVertex.goalHasSolution())
+				.heuristic(InvestigadoresHeuristic::heuristic);
 		}
 	
 	// Ejercicio4: Builder
